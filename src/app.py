@@ -5,8 +5,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 # streamlit run app.py ou streamlit run src\app.py
 
+from time import sleep
+
 def carrega_dados(caminho):
     dados = pd.read_csv(caminho)
+    sleep(3)
     return dados
 
 def grafico_comparativo(dados_2019, dados_2020, causa, estado="BRASIL"):
